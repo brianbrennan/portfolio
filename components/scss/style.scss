@@ -1,0 +1,444 @@
+//have all imports in this file
+
+@import url(http://fonts.googleapis.com/css?family=Lato|Montserrat:700);
+
+@font-face {
+	font-family: 'Socicon';
+	src: url('fonts/socicon-webfont.eot'); /* IE9 Compat Modes */
+	src: url('fonts/socicon-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('fonts/socicon-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+	url('fonts/socicon-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@import "bourbon/bourbon";
+@import "susy/susy";
+@import "breakpoint/breakpoint";
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
+//-------------------------screen sizes
+
+$desk:			1140px 1980px;
+
+//-------------------------Screen Size Grids
+
+$deskLayout:	(  
+	container: auto,
+	columns: 12,
+	gutters: 1/4,
+	gutter-position: after
+	);
+
+//-------------------------------------Styles
+
+//-------------------------Common
+
+h1,h2,h3,h4,h5,h6{
+	font-family:$headline;
+	color:$black;
+}
+
+p,span,blockquote{
+	font-family:$copy;
+	color:$grey;
+	line-height:1.5;
+}
+
+a{
+	color:inherit;
+	text-decoration:none;
+}
+
+b{
+	font-weight:bold;
+}
+
+i{
+	font-style:italic;
+}
+
+//-------------------------Desktop
+@include breakpoint($desk){
+	@include layout($deskLayout);
+
+	.wrapper{
+		@include container(1140px);
+	}
+
+	header{
+		position:fixed;
+		width:100%;
+		top:0;
+		z-index:100;
+		padding-top:$sm;
+		padding-bottom: $sm;
+
+		.logo{
+			@include span(3);
+			.logo-svg{
+				fill:$black;
+				height:$med;
+			}
+		}
+
+		nav{
+			@include span(6);
+			@include last();
+			ul{
+				li{
+					font-family:$copy;
+					@include span(2 of 10);
+					color:$grey;
+					margin-top:$sm;
+
+					&:nth-child(5){
+						@include last();
+					}
+
+					a:hover{color:$black;}
+				}
+			}
+		}
+	}
+
+	.hero{
+		height:100vh;
+		width:100%;
+		background:$light-grey;
+		position:relative;
+
+		.hero-caption{
+			font-family:$copy;
+			font-size:$regFont;
+			color:$grey;
+			position:absolute;
+			bottom:20vh;
+
+			h2{
+				font-family:$headline;
+				font-size:$xlFont;
+				color:$black;
+			}
+
+			span{
+				display:block;
+				margin-top:$sm;
+				margin-left:$tny;
+				line-height:1.5
+			}
+		}
+	}//end of hero
+
+	.work, .process, .contact{
+		margin-bottom:$lg;
+
+		.divide{
+			width:30%;
+			clear:both;
+			margin:auto;
+			height:1px;
+			background:$light-grey;
+			margin-top:$lg;
+		}
+
+		h3{
+			margin:$lg;
+			text-align:center;
+			font-family:$headline;
+			font-size:$lgFont;
+		}
+	}//general styles for sections
+
+	.work{
+		.work-piece{
+			@include span(4);
+			background:$light-grey;
+			height:200px;
+
+			&:nth-child(3n){
+				@include last();
+			}
+		}//end of .work-piece
+	}//end of .work
+
+	.process{
+		.process-piece{
+
+			h4,p{
+				@include span(6);
+				margin-bottom:$lg;
+			}
+
+			h4{
+				font-size:$bigFont;
+				text-align: left;
+				line-height:.5;
+
+				span{
+					font-size:$smFont;
+				}
+			}
+
+			p{@include last()}
+		}
+	}//end of .process
+
+	.contact{
+		form{
+			width:60%;
+			margin:auto;
+			min-width:500px;
+
+			input[type="text"], input[type="email"], textarea{
+				box-sizing: border-box;
+				padding:$tny;
+				color:$grey;
+				border:1px solid $mid-grey;
+				@include transition(border .2s);
+				margin-bottom:$sm;
+
+				&:focus{
+					outline:none;
+					color:$grey;
+					border:1px solid $grey;
+				}
+			}//end of general input settings
+
+			input[type="text"],input[type="email"]{
+				@include span(6);
+
+				&:nth-child(2n){@include last()}
+			}
+
+			textarea{
+				@include span(12);
+				resize: none;
+				font-family: $copy;
+			}
+
+			input[type="submit"]{
+				background:$black;
+				color:$light-grey;
+				padding:$sm;
+				border:none;
+				clear:both;
+				cursor:pointer;
+				@include span(isolate 4 at 5);
+				@include transition(background .2s);
+
+				&:hover{
+					background:$light-black;
+				}
+			}
+		}
+	}//end of .contact
+
+	footer{
+		background:$light-grey;
+		.foot-section{
+			box-sizing:border-box;
+			@include span(4);
+			height:200px;
+			margin-top:$lg;
+			margin-bottom:$lg;
+
+			&:nth-child(3n){
+				@include last();
+			}
+		}
+
+		.left,.mid{
+			border-right:1px solid $mid-grey;
+		}
+
+		.left{
+			ul{
+				li{
+					margin-top:$reg;
+					@include span(6);
+					font-family: $copy;
+					color:$fade-grey;
+					&:nth-child(2n){
+						@include last();
+					}
+					a:hover{
+						color:$grey;
+					}
+				}
+			}
+		}//end of .left
+
+		.mid{
+			ul{
+				@include container(80%);
+				li{
+					margin-top:$lg;
+					font-family: 'Socicon';
+					color:$fade-grey;
+					font-size:$lgFont;
+					@include span(4);
+					text-align: center;
+
+					&:nth-child(3n){
+						@include last();
+					}
+					a:hover{
+						color:$grey;
+					}
+				}
+
+				.last{
+					@include last();
+				}
+			}
+		}//end of mid
+
+		.right{
+			padding-left:$reg;
+			h5{
+				color:$fade-grey;
+			}
+
+			h4{
+				margin-top:$reg;
+				font-size:$lgFont;
+				color:$grey;
+
+				a:hover{
+					color:$black;
+				}
+			}
+
+			span{
+				margin-left:2px;
+				display:block;
+			}
+		}
+	}//end of footer
+
+
+	//----------------------------------------Blog Pages
+
+	#blog{
+		.blog-wrapper{
+			@include container(1140px);
+		}
+
+		.divide{
+			width:30%;
+			clear:both;
+			margin:auto;
+			height:1px;
+			background:$light-grey;
+			margin-top:$lg;
+		}
+
+		.title-section{
+			padding-top:$xl;
+			padding-bottom:$xl;
+			background:$light-grey;
+			.title{
+				font-family:$headline;
+				font-size:$xlFont;
+				color:$black;
+			}
+
+			.subtitle{
+				display:block;
+				margin-top:$sm;
+				margin-left:$tny;
+				line-height:1.5
+			}
+		}
+
+		.blog-list{
+
+			.post{
+				margin-top:$lg;
+				position:relative;
+				@include span(9);
+
+				h4{
+					font-size:$lg;
+				}
+
+				p{
+					margin-left:2px;
+					margin-top:$sm;
+				}
+
+				.date{
+					position:absolute;
+					right:$sm;
+					top:$sm;
+					margin-top:0;
+				}
+			}
+		}
+
+		.post-content{
+			margin:$lg 0;
+			@include span(9);
+
+			h3{
+				margin-bottom:$sm;
+				font-size:$lgFont;
+			}
+
+			p{
+				margin-bottom:$reg;
+			}
+
+			pre{
+				counter-reset:line-numbering;
+				background:$grey;
+				padding:12px 0px 14px 0;
+				margin-bottom:$reg;
+				line-height:140%;
+				font-family:'courier';
+				font-size:$smFont;
+
+				.line{
+					color:$white;
+					font-family:'courier';
+				}
+
+				.line::before {
+					content: counter(line-numbering);
+					counter-increment: line-numbering;
+					padding-right: 1em;
+					/* space after numbers */
+					padding-left:8px;
+					width: 1.5em;
+					text-align: right;
+					opacity: 0.5;
+					color:$white;
+				}
+			}
+		}
+
+		aside{
+			@include last();
+			margin-top:$lg;
+
+			h5{
+				font-size:$medFont;
+				margin-bottom:$sm;
+				margin-top:$sm;
+			}
+
+			ul{
+				li{
+					font-family:$copy;
+					color:$grey;
+					margin-bottom:$sm;
+
+					a:hover{
+						color:$black;
+					}
+				}
+			}
+		}
+	}
+}//end of desktop breakpoint

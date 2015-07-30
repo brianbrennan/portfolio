@@ -1,0 +1,50 @@
+//------------------------Susy
+
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  use-custom: (
+    box-sizing: false
+  )
+);
+
+
+//------------------------Typography
+
+$headline: 		'Montserrat' sans-serif;//edited to fit style
+$copy:			'Lato' sans-serif;
+
+//------------------------Type Sizing
+
+$minFont:			10px;
+$liFont:			12px;
+$smFont:			14px;
+$regFont:			16px;
+$medFont:			24px;
+$lgFont:			36px;
+$bigFont:			60px;
+$xlFont:			120px;
+
+//------------------------Colors
+
+$black:				#121212;
+$light-black:		#222;
+$grey:				#6f6f6f;
+$white:				#FFF;
+$light-grey:		#ececec;
+$mid-grey:			#ccc;
+$fade-grey:			#a0a0a0;
+
+//------------------------Spacing
+
+$mic:				5px;
+$tny:				8px;
+$sm:				15px;
+$reg:				30px;
+$med:				45px;
+$lg:				60px;
+$xl:				90px;
+$xxl:				120px;
