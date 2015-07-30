@@ -13,9 +13,6 @@ $(window).scroll(function(event){
 
 	if($(this).scrollTop() > topHeight && $(this).scrollTop() > titleHeight){
 		$('header').addClass('light');
-		console.log(topHeight);
-		console.log(titleHeight);
-		console.log($(this).scrollTop())
 	} else{
 		$('header').removeClass('light');
 	}

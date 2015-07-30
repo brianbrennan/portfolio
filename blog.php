@@ -4,7 +4,7 @@
 	<section class="title-section">
 		<div class="blog-wrapper">
 			<h3 class="title wow fadeInDown">My Blog</h3>
-			<span class=" subtitle wow fadeInDown" data-wow-delay="400ms">Thoughts on Web Design <br> and Development</span>
+			<span class=" subtitle wow fadeInDown" data-wow-delay="400ms">Thoughts on Web Design and Development</span>
 		</div>
 	</section>
 	<div class="blog-wrapper">
