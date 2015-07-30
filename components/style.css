@@ -87,7 +87,15 @@ i {
     top: 0;
     z-index: 100;
     padding-top: 15px;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    -webkit-transition: top 0.3s;
+    -moz-transition: top 0.3s;
+    transition: top 0.3s; }
+    header.nav-up {
+      top: -80px; }
+    header.light {
+      background: #FFF;
+      border-bottom: 1px solid #ececec; }
     header .logo {
       width: 23.72881%;
       float: left;

@@ -7,11 +7,12 @@
 	<link rel="stylesheet" href="components/libs/wow/animate.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="components/libs/wow/wow.min.js"></script>
+	<script src="components/script.js"></script>
 
 </head>
 <body>
 
-	<header>
+	<header class="nav-down">
 		<div class="wrapper">
 			<div class="logo">
 				<svg version="1.1" id="Layer_1" class="logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

@@ -16,34 +16,37 @@ var onError = function (err) {
 
 gulp.task('js', function() {
   return gulp.src('components/js/*.js')
-    .pipe(concat('script.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./components'))
-    .pipe(livereload());
-});
+  .pipe(plumber({
+    errorHandler: onError
+    }))
+  .pipe(concat('script.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('./components'))
+  .pipe(livereload());
+  });
 
 gulp.task('sass', function(){
   return gulp.src('components/scss/style.scss')
   .pipe(plumber({
-      errorHandler: onError
+    errorHandler: onError
     }))
   .pipe(sass())
   .pipe(gulp.dest('components'))
   .pipe(livereload());
-});
+  });
 
 var tinylr;
 gulp.task('livereload', function() {
   tinylr = require('tiny-lr')();
   tinylr.listen(4002);
-});
+  });
 
 
 
 gulp.task('watch',function(){
   livereload.listen();
   gulp.watch(['components/scss/*.scss','components/js/*.js'],['sass','js'])
-});
+  });
 
 
 gulp.task('default', [ 'sass', 'livereload', 'watch']);

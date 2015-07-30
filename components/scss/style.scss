@@ -73,6 +73,16 @@ i{
 		z-index:100;
 		padding-top:$sm;
 		padding-bottom: $sm;
+		@include transition(top 0.3s);
+
+		&.nav-up {
+			top: -80px;
+		}
+
+		&.light{
+			background:$white;
+			border-bottom:1px solid $light-grey;
+		}
 
 		.logo{
 			@include span(3);
