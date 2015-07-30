@@ -345,7 +345,7 @@ i{
 		}
 
 		.title-section{
-			padding-top:$xl;
+			padding-top:$xl * 2;
 			padding-bottom:$xl;
 			background:$light-grey;
 			.title{
@@ -450,5 +450,26 @@ i{
 				}
 			}
 		}
-	}
+	}//end of blog
+
+	#work{
+		.title-section{
+			padding-top:$xl * 2;
+			padding-bottom:$xl;
+			background:$light-grey;
+			.title{
+				font-family:$headline;
+				font-size:$xlFont;
+				color:$black;
+			}
+
+			.subtitle{
+				display:block;
+				margin-top:$sm;
+				margin-left:$tny;
+				line-height:1.5
+			}
+		}
+		
+	}//end of work
 }//end of desktop breakpoint

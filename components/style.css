@@ -306,7 +306,7 @@ i {
     background: #ececec;
     margin-top: 60px; }
   #blog .title-section {
-    padding-top: 90px;
+    padding-top: 180px;
     padding-bottom: 90px;
     background: #ececec; }
     #blog .title-section .title {
@@ -378,4 +378,17 @@ i {
       color: #6f6f6f;
       margin-bottom: 15px; }
       #blog aside ul li a:hover {
-        color: #121212; } }
+        color: #121212; }
+  #work .title-section {
+    padding-top: 180px;
+    padding-bottom: 90px;
+    background: #ececec; }
+    #work .title-section .title {
+      font-family: "Montserrat" sans-serif;
+      font-size: 120px;
+      color: #121212; }
+    #work .title-section .subtitle {
+      display: block;
+      margin-top: 15px;
+      margin-left: 8px;
+      line-height: 1.5; } }
