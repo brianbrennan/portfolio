@@ -14,30 +14,22 @@
 		<section class="blog-list">
 			<div class="post">
 				<h4><a href="single.php">This is a Title</a></h4>
-				<p>Here is an excerpt from the writing</p>
-
-				<p class="date">Posted on <b> 07.08.15</b></p>
+				<p>Written on July 7th, 2015</p>
 				<div class="divide"></div>
 			</div>
 			<div class="post">
-				<h4>This is a Title</h4>
-				<p>Here is an excerpt from the writing</p>
-
-				<p class="date">Posted on <b> 07.08.15</b></p>
+				<h4><a href="single.php">This is a Title</a></h4>
+				<p>Written on July 7th, 2015</p>
 				<div class="divide"></div>
 			</div>
 			<div class="post">
-				<h4>This is a Title</h4>
-				<p>Here is an excerpt from the writing</p>
-
-				<p class="date">Posted on <b> 07.08.15</b></p>
+				<h4><a href="single.php">This is a Title</a></h4>
+				<p>Written on July 7th, 2015</p>
 				<div class="divide"></div>
 			</div>
 			<div class="post">
-				<h4>This is a Title</h4>
-				<p>Here is an excerpt from the writing</p>
-
-				<p class="date">Posted on <b> 07.08.15</b></p>
+				<h4><a href="single.php">This is a Title</a></h4>
+				<p>Written on July 7th, 2015</p>
 				<div class="divide"></div>
 			</div>
 		</section>

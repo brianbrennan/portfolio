@@ -43,3 +43,7 @@ Temporary Items
 .apdisk
 
 node_modules
+ftpsync.settings
+
+blog/wp-admin
+blog/wp-includes

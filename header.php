@@ -1,3 +1,20 @@
+<?php 
+require('blog/wp-load.php');
+?>
+
+<?php
+function myGET() {
+  $aGet = array();
+
+  if(isset($_GET['query'])) {
+    $aGet = explode('/', $_GET['query']);
+  }
+
+  return $aGet;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +59,7 @@
 					<li><a href="index.php">Home</a></li>
 					<li><a href="work.php">Work</a></li>
 					<li><a href="about.php">About</a></li>
-					<li><a href="blog.php">Blog</a></li>
+					<li><a href="blog">Blog</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>
 			</nav>

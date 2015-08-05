@@ -374,14 +374,16 @@ i {
     margin-top: 60px; }
     #blog aside h5 {
       font-size: 24px;
-      margin-bottom: 15px;
-      margin-top: 15px; }
-    #blog aside ul li {
-      font-family: "Lato" sans-serif;
-      color: #6f6f6f;
       margin-bottom: 15px; }
-      #blog aside ul li a:hover {
-        color: #121212; }
+    #blog aside ul {
+      display: block;
+      margin-bottom: 30px; }
+      #blog aside ul li {
+        font-family: "Lato" sans-serif;
+        color: #6f6f6f;
+        margin-bottom: 15px; }
+        #blog aside ul li a:hover {
+          color: #121212; }
   #work .title-section {
     padding-top: 180px;
     padding-bottom: 90px;
@@ -413,7 +415,6 @@ i {
         margin-right: 0; }
       #work .work-pieces .work-piece img {
         width: 100%;
-        height: 200px;
         background: #ececec;
         border: none; }
       #work .work-pieces .work-piece h4 {
