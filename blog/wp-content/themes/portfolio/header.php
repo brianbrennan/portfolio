@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<?php $r = "http://localhost/portfolio/components" ?>
+<?php $r = "http://www.brianbrennan.com/components" ?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">

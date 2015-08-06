@@ -4,12 +4,12 @@ app.config(function($routeProvider) {
     $routeProvider.
       when('/', {
       	controller: 'WorkController',
-        templateUrl: 'components/partials/main.html',
+        templateUrl: 'main.html',
         controllerAs:'app'
       }).
       when('/:work_id', {
       	controller: 'WorkController',
-        templateUrl: 'components/partials/single.html',
+        templateUrl: 'view.html',
         controllerAs: 'app'
       }).
       otherwise({
@@ -18,11 +18,11 @@ app.config(function($routeProvider) {
 });
 
 var works = [
-	{"name":"First Piece of Work","work_id":"00"},
-	{"name":"Second Piece of Work","work_id":"01"},
-	{"name":"Third Piece of Work","work_id":"02"},
-	{"name":"Fourth Piece of Work","work_id":"03"},
-	{"name":"Fifth Piece of Work","work_id":"04"}
+	{"name":"First Piece of Work","img":"https://unsplash.it/800","work_id":"00"},
+	{"name":"Second Piece of Work","img":"https://unsplash.it/601","work_id":"01"},
+	{"name":"Third Piece of Work","img":"https://unsplash.it/880","work_id":"02"},
+	{"name":"Fourth Piece of Work","img":"https://unsplash.it/600","work_id":"03"},
+	{"name":"Fifth Piece of Work","img":"https://unsplash.it/700","work_id":"04"}
 	];
 
 

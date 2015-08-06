@@ -12,11 +12,11 @@ require('blog/wp-load.php');
 	<link rel="stylesheet" href="components/libs/wow/animate.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="components/libs/wow/wow.min.js"></script>
-	<script src="components/script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-animate.js"></script>
 	<script src="components/js/workApp/app.js"></script>
+	<script src="components/script.js"></script>
 
 </head>
 <body>

@@ -384,6 +384,8 @@ i {
         margin-bottom: 15px; }
         #blog aside ul li a:hover {
           color: #121212; }
+  #work .view {
+    min-height: 1000px; }
   #work .title-section {
     padding-top: 180px;
     padding-bottom: 90px;
@@ -415,6 +417,7 @@ i {
         margin-right: 0; }
       #work .work-pieces .work-piece img {
         width: 100%;
+        height: 200px;
         background: #ececec;
         border: none; }
       #work .work-pieces .work-piece h4 {
